@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部选项卡区域 -->
+<com.why.project.fragmenttabhostautodemo.views.tab.MyFragmentTabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_top_auto_ftabhost_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 必须要有LinearLayout，因为FragmentTabHost属于FrameLayout帧布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 选项卡区域 -->
+        <!--注意：原来的配置：android:layout_height="?attr/actionBarSize"-->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"/>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cfcfcf">
+        </View>
+
+        <!-- 碎片切换区域，且其id必须为@android:id/tabcontent -->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</com.why.project.fragmenttabhostautodemo.views.tab.MyFragmentTabHost>
